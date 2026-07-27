@@ -5,7 +5,8 @@ const port = process.env.PORT ? parseInt(process.env.PORT) : 3001
 
 serve({
   fetch: app.fetch,
-  port
+  port,
+  hostname: '0.0.0.0'
 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`)
 })
