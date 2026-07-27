@@ -23,6 +23,9 @@ app.use("*", authMiddleware);
 app.use(logger());
 
 // apis
+app.get("/", () => {
+  return "hello portfolio";
+});
 app.route("/api/contact", contactRoute);
 
 app.on(["GET", "POST"], "/api/auth/*", (c) => {
